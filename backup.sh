@@ -95,3 +95,6 @@ curl -X PUT \
 --header "Authorization: AWS $AWS_ACCESS_KEY:$SIGNATURE" \
 --upload-file $DIR/backup/$ARCHIVE_NAME \
 https://$S3_BUCKET.s3-$S3_REGION.amazonaws.com/$ARCHIVE_NAME
+
+# Remove the archive file
+rm $DIR/backup/$ARCHIVE_NAME
